@@ -2,6 +2,8 @@ package com.m2i.devops;
 
 public class Calculator {
 
+  public Object toto = null;
+
   public int add(int a, int b) {
     return a + b;
   }

@@ -10,6 +10,7 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
     id 'jacoco'
+    id "com.github.spotbugs" version "4.7.0"
 }
 
 dependencies {
@@ -25,7 +26,18 @@ dependencies {
 
 // In this section you declare where to find the dependencies of your project
 repositories {
+    mavenCentral()
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
+
+spotbugs {
+    ignoreFailures = true
+    spotbugsTest.enabled = false
+}
+
+
+
+
+
