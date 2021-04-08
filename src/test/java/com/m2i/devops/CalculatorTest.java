@@ -40,6 +40,17 @@ public class CalculatorTest {
   }
 
   @Test
+  public void testDiv() {
+    int a = 6;
+    int b = 3;
+
+    Calculator calc = new Calculator();
+    int actual = calc.div(a, b);
+
+    assertEquals(2, actual);
+  }
+
+  @Test
   public void testIsPairTrue() {
     Calculator calc = new Calculator();
 
@@ -54,12 +65,11 @@ public class CalculatorTest {
 
   @Test
   public void testIsPairFalse() {
-//    Calculator calc = new Calculator();
-//
-//    // Test is not Pair
-//    boolean actual = calc.isPair(3);
-//    assertFalse(actual);
-    assertTrue(true);
+    Calculator calc = new Calculator();
+
+    // Test is not Pair
+    boolean actual = calc.isPair(3);
+    assertFalse(actual);
   }
 
 }
