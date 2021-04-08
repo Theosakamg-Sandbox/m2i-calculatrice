@@ -61,4 +61,9 @@ public class CalculatorTest {
     assertFalse(actual);
   }
 
+  @Test
+  public void testFail() {
+    fail("For test Jenkins");
+  }
+
 }
