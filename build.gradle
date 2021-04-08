@@ -13,6 +13,7 @@ plugins {
     id 'checkstyle'
     id "com.github.spotbugs" version "4.7.0"
     id 'pmd'
+    id "de.aaschmid.cpd" version "3.2"
 }
 
 dependencies {
@@ -65,5 +66,10 @@ pmd {
                 "category/java/documentation.xml",
                 "category/java/security.xml"
                 ]
+}
+
+cpd {
+    language = 'java'
+    toolVersion = '6.33.0' // defaults to '6.13.0'; just available for v6.1.0 and higher (see explanation above)
 }
 
